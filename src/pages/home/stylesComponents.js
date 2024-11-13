@@ -14,3 +14,5 @@ export const LeftMenu = styled.div`
 
 export const MainContent = styled.div`
 `
+export const MenuList = styled.ul`
+`
