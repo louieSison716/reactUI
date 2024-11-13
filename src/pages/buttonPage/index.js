@@ -6,15 +6,35 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import Button from '../../components/button'
+import {
+    ButtonPageHolder    
+  } from "./styledComponents";
 
 const ButtonPage = () => {
     
     return (
         <> 
-            <Button/>
+            <ButtonPageHolder
+                className='button-page-holder'
+            >
+                <Button
+                    variant='text'
+                >
+                    Text
+                </Button>
+                <Button
+                    variant='contained'
+                >
+                    Contained
+                </Button>
+                <Button
+                    variant='outlined'
+                >
+                    Outlined
+                </Button>
+            </ButtonPageHolder>
         </>
     )
-
 }
 
 ButtonPage.propTypes = {}

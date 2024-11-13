@@ -4,15 +4,21 @@
  */
 
 import React, { useState, useEffect, useCallback, useRef } from 'react'
-// import {
-    
-//   } from "./stylesComponents";
+import {
+    StyledButton    
+  } from "./styledComponents";
 
-const Button = () => {
-    
+const Button = ({ children, onClick, color = 'blue', variant = 'text' }) => {
+
     return (
         <> 
-            <h1>Button</h1>
+            <StyledButton
+                className={`padding-2 shadow-none hover:shadow background-light-${color} hover:background-dark-${color}`}
+                onClick={onClick}
+                $variant={variant}
+            >
+                {children}
+            </StyledButton>
         </>
     )
 
