@@ -1,7 +1,12 @@
 import styled, { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
-  
+   :root {
+    --primary-color: #1976d2;
+    --text-primary-color: #ffffff;
+    --text-diabled-color: #00000042;
+    --bg-disbaled-color: #0000001e;
+   }
 `
 
 export const MainContainer = styled.div`

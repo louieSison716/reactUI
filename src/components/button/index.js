@@ -8,14 +8,27 @@ import {
     StyledButton    
   } from "./styledComponents";
 
-const Button = ({ children, onClick, color = 'blue', variant = 'text' }) => {
+const Button = ({ 
+    children, 
+    onClick, 
+    variant = 'text',
+    disabled = false
+}) => {
+
+    const handleClick = (event) => {
+        const buttonText = event.target.textContent;
+        if (buttonText) {
+            onClick?.(buttonText);
+        }
+    };
 
     return (
         <> 
             <StyledButton
-                className={`padding-2 shadow-none hover:shadow background-light-${color} hover:background-dark-${color}`}
-                onClick={onClick}
+                className="styled-button"
+                onClick={handleClick}
                 $variant={variant}
+                $disabled={disabled}
             >
                 {children}
             </StyledButton>

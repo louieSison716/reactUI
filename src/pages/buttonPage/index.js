@@ -12,6 +12,10 @@ import {
 
 const ButtonPage = () => {
     
+    const handleClickText = (label) => {
+        console.log(label)
+    }
+
     return (
         <> 
             <ButtonPageHolder
@@ -19,16 +23,20 @@ const ButtonPage = () => {
             >
                 <Button
                     variant='text'
+                    onClick={handleClickText}
+                    disabled={true}
                 >
                     Text
                 </Button>
                 <Button
                     variant='contained'
+                    disabled={true}
                 >
                     Contained
                 </Button>
                 <Button
                     variant='outlined'
+                    disabled={true}
                 >
                     Outlined
                 </Button>

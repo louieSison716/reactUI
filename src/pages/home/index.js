@@ -6,6 +6,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import { Outlet, Link } from 'react-router-dom';
 import {
+    GlobalStyle,
     LeftMenu,
     MainContent,
     MainContainer,
@@ -58,6 +59,7 @@ const Home = ({children}) => {
 
     return (
         <> 
+            <GlobalStyle/>
             <MainContainer>
                 <LeftMenu>
                     <MenuList
