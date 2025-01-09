@@ -31,6 +31,11 @@ const Home = ({children}) => {
             isActive: false,
             href: '/button-group'
         },
+        {
+            name: 'Select',
+            isActive: false,
+            href: '/select'
+        },
     ])
 
     const onMenuChange = (index) => {
