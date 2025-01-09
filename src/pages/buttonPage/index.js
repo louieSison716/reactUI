@@ -26,26 +26,95 @@ const ButtonPage = () => {
             <div className='content-body'>
                 <h2>Basic Button</h2>
                 <p className='description'>The Button has 3 types, text, contained and outlined.</p>
+                <Vessel direction="row" justify="flex-start" align="center" gap="10px">
+                    <Button
+                        variant='text'
+                        onClick={handleClickText}
+                    >
+                        Text
+                    </Button>
+                    <Button
+                        variant='contained'
+                    >
+                        Contained
+                    </Button>
+                    <Button
+                        variant='outlined'
+                    >
+                        Outlined
+                    </Button>
+                </Vessel>
             </div>
-            <Vessel direction="row" justify="flex-start" align="center" gap="10px">
-                <Button
-                    variant='text'
-                    onClick={handleClickText}
-                >
-                    Text
-                </Button>
-                <Button
-                    variant='contained'
-                    disabled={true}
-                >
-                    Contained
-                </Button>
-                <Button
-                    variant='outlined'
-                >
-                    Outlined
-                </Button>
-            </Vessel>
+            <div className='content-body'>
+                <h2>Text Button</h2>
+                <Vessel direction="row" justify="flex-start" align="center" gap="10px">
+                    <Button
+                        variant='text'
+                        onClick={handleClickText}
+                    >
+                        Primary
+                    </Button>
+                    <Button
+                        variant='text'
+                        disabled={true}
+                    >
+                        Disabled
+                    </Button>
+                    <Button
+                        variant='text'
+                        disabled={true}
+                        link={true}
+                    >
+                        Link
+                    </Button>
+                </Vessel>
+            </div>
+            <div className='content-body'>
+                <h2>Contained Button</h2>
+                <Vessel direction="row" justify="flex-start" align="center" gap="10px">
+                    <Button
+                        variant='contained'
+                        onClick={handleClickText}
+                    >
+                        Primary
+                    </Button>
+                    <Button
+                        variant='contained'
+                        disabled={true}
+                    >
+                        Disabled
+                    </Button>
+                    <Button
+                        variant='contained'
+                        link={true}
+                    >
+                        Disabled
+                    </Button>
+                </Vessel>
+            </div>
+            <div className='content-body'>
+                <h2>Outlined Button</h2>
+                <Vessel direction="row" justify="flex-start" align="center" gap="10px">
+                    <Button
+                        variant='outlined'
+                        onClick={handleClickText}
+                    >
+                        Primary
+                    </Button>
+                    <Button
+                        variant='outlined'
+                        disabled={true}
+                    >
+                        Disabled
+                    </Button>
+                    <Button
+                        variant='outlined'
+                        link={true}
+                    >
+                        Disabled
+                    </Button>
+                </Vessel>
+            </div>
         </>
     )
 }

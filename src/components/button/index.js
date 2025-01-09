@@ -5,14 +5,17 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import {
-    StyledButton    
+    StyledButton,
+    StyledLink    
   } from "./styledComponents";
 
 const Button = ({ 
     children, 
     onClick, 
     variant = 'text',
-    disabled = false
+    disabled = false,
+    link = false,
+    href = '/'
 }) => {
 
     const handleClick = (event) => {
@@ -21,6 +24,22 @@ const Button = ({
             onClick?.(buttonText);
         }
     };
+
+    if(link){
+        return (
+            <>
+                <StyledLink 
+                    href={href}
+                    className="styled-button"
+                    onClick={handleClick}
+                    $variant={variant}
+                    $disabled={disabled}
+                >
+                    LINK
+                </StyledLink>
+            </>
+        )
+    }
 
     return (
         <> 
