@@ -6,6 +6,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import Button from '../../components/button'
+import Vessel from '../../components/vessel';
 import {
     ButtonPageHolder    
   } from "./styledComponents";
@@ -18,13 +19,18 @@ const ButtonPage = () => {
 
     return (
         <> 
-            <ButtonPageHolder
-                className='button-page-holder'
-            >
+            <div className='content-body'>
+                <h1>Button</h1>
+                <p className='description'>The Button is an HTML tag interface that can submit forms, trigger JavaScript functions or execute custom actions.</p>
+            </div>
+            <div className='content-body'>
+                <h2>Basic Button</h2>
+                <p className='description'>The Button has 3 types, text, contained and outlined.</p>
+            </div>
+            <Vessel direction="row" justify="flex-start" align="center" gap="10px">
                 <Button
                     variant='text'
                     onClick={handleClickText}
-                    disabled={true}
                 >
                     Text
                 </Button>
@@ -36,11 +42,10 @@ const ButtonPage = () => {
                 </Button>
                 <Button
                     variant='outlined'
-                    disabled={true}
                 >
                     Outlined
                 </Button>
-            </ButtonPageHolder>
+            </Vessel>
         </>
     )
 }
