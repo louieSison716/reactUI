@@ -30,7 +30,7 @@ export const DropdownIcon = styled.svg`
   transform: ${props => props.isOpen ? 'rotate(180deg)' : 'rotate(0)'};
 `;
 
-export const OptionsList = styled.ul`
+export const SelectOptionList = styled.ul`
   position: absolute;
   top: 103%;
   left: 0;

@@ -10,7 +10,9 @@ import {
     LeftMenu,
     MainContent,
     MainContainer,
-    MenuList
+    MenuList,
+    MenuListItem,
+    LeftMenuTitle
   } from "./stylesComponents";
 
 const Home = ({children}) => {
@@ -49,7 +51,8 @@ const Home = ({children}) => {
     const renderMenuList = (e) => {
         return menuList.map((item,index,arr) => {
             return (
-                <li
+                <MenuListItem
+                    className='menu-list__item'
                     key={`${index + '-' + item.name}`}
                 >
                     <span
@@ -57,7 +60,7 @@ const Home = ({children}) => {
                     >
                         <a href={item.href}>{item.name}</a>
                     </span>
-                </li>
+                </MenuListItem>
             )
          })
     }
@@ -65,15 +68,24 @@ const Home = ({children}) => {
     return (
         <> 
             <GlobalStyle/>
-            <MainContainer>
-                <LeftMenu>
+            <MainContainer
+                className='main-container'
+            >
+                <LeftMenu
+                    className='left-menu'
+                >
+                    <LeftMenuTitle>
+                        React UI <span className='title-version'>v1</span>
+                    </LeftMenuTitle>
                     <MenuList
                         className="menu-list"
                     >
                         {renderMenuList()}
                     </MenuList>
                 </LeftMenu>
-                <MainContent>
+                <MainContent
+                    className='main-content'
+                >
                    <Outlet/>
                 </MainContent>
             </MainContainer>

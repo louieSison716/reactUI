@@ -8,7 +8,7 @@ import {
     SelectContainer,
     SelectButton,
     DropdownIcon,
-    OptionsList,
+    SelectOptionList,
     Option
 } from './styledComponents';
 
@@ -26,19 +26,23 @@ const Select = ({ options, onChange, label = 'Select an option' }) => {
 
   return (
     <SelectContainer className='select-container'>
-      <SelectButton onClick={toggleDropdown}>
+      <SelectButton 
+        className='select-button'
+        onClick={toggleDropdown}>
         {selectedOption ? selectedOption.label : label}
         <DropdownIcon isOpen={isOpen} viewBox="0 0 24 24">
           <path d="M7 10l5 5 5-5z" />
         </DropdownIcon>
       </SelectButton>
-      <OptionsList isOpen={isOpen}>
+      <SelectOptionList 
+        className='select-option-list'
+        isOpen={isOpen}>
         {options.map((option) => (
           <Option key={option.value} onClick={() => handleOptionClick(option)}>
             {option.label}
           </Option>
         ))}
-      </OptionsList>
+      </SelectOptionList>
     </SelectContainer>
   );
 };
